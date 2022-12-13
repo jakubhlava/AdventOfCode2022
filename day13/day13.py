@@ -1,5 +1,3 @@
-import traceback
-
 with open("input.txt", "r") as f:
     pairs = f.read().split("\n\n")
 
@@ -36,8 +34,6 @@ def compare_lists(left, right):
                         return result
         except IndexError:
             return IN_ORDER
-        except:
-            traceback.print_exc()
     return DONT_KNOW if len(left) == len(right) else OUT_OF_ORDER  # right longer
 
 
